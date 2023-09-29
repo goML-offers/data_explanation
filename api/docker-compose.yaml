@@ -1,0 +1,7 @@
+version: '3'
+services: 
+    core_api1:
+        build: .
+        container_name: "redshiftllm"
+        ports: 
+            - "8000:8000"

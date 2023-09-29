@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+openai
+pandas
+python-multipart
+psycopg2
+datetime
+boto3
+BeautifulSoup4
+beautifulSoup4
+pandasai
+bs4
+requests
+

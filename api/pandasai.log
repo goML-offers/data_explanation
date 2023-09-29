@@ -1,0 +1,49 @@
+2023-09-29 13:50:10 [INFO] Question: highest price,strictly only give me answer as text
+2023-09-29 13:50:10 [INFO] Running PandasAI with openai LLM...
+2023-09-29 13:50:10 [INFO] Prompt ID: f09c6820-a732-4f82-a811-b339a02bf8e3
+2023-09-29 13:50:24 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart save it to an image in /temp_chart.png and do not show the chart.)
+    4. Output: return a dictionary of:
+    - type (possible values "text", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+    """
+    # Get the highest price from the dataframe
+    highest_price = dfs[0]['cost'].max()
+    
+    # Convert the highest price to text
+    highest_price_text = str(highest_price)
+    
+    # Return the result as text
+    return {"type": "text", "value": highest_price_text}
+```
+
+2023-09-29 13:50:24 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart save it to an image in /temp_chart.png and do not show the chart.)
+    4. Output: return a dictionary of:
+    - type (possible values "text", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Example output: { "type": "text", "value": "The average loan amount is $15,000." }
+    """
+    highest_price = dfs[0]['cost'].max()
+    highest_price_text = str(highest_price)
+    return {'type': 'text', 'value': highest_price_text}
+        ```
+2023-09-29 13:50:24 [INFO] Answer: {'type': 'text', 'value': '5000'}
+2023-09-29 13:50:24 [INFO] Executed in: 14.595463514328003s
