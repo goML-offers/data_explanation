@@ -41,7 +41,7 @@ def summary_generation(file_path):
             a brief description, without delving into technical details like data types. Instead, focus on its 
             business implications. For instance, if columns include 'Name', 'Birthday', 'Sex', and 'Hospital', 
             your interpretation might be: "The dataset contains birth records of children from hospitals in a 
-            specific region." Your description should be text-based and atmost 500 words.
+            specific region." Your description should be text-based and atmost 100 words.
             Try and categorize them under a specific function in an industry. Below are the outputs that you 
             need to generate. For industry, pick one of the industried recognized by Global Industry Classification Standard (GICS)
             For function, choose one of the following functions that's most appropriate - Sales, Marketing, Operations, Delivery,
