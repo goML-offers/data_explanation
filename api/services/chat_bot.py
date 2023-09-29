@@ -25,6 +25,6 @@ def analyze_dataframe(df: pd.DataFrame, question: str) -> str:
     pandas_ai = PandasAI (llm, conversational=False)
     
     # Ask a question about the DataFrame
-    response = pandas_ai(df, question+",strictly only give me answer as text")
+    response = pandas_ai(df, question+",strictly only give me answer as text.the text should be minimum of 50 words, well explained and understandable to a layman")
    
     return response
