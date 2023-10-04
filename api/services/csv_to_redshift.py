@@ -116,5 +116,5 @@ def get_table_schema(table_name):
     # Close the cursor and connection
     cur.close()
     conn.close()
-    schema_dict = {column_name: data_type for column_name, data_type in schema_info}
+    schema_dict = [column_name for column_name, data_type in schema_info]
     return schema_dict
