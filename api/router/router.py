@@ -1,4 +1,5 @@
 import sys
+from typing import List
 from fastapi import FastAPI, File,  UploadFile
 from fastapi import APIRouter, HTTPException, Response
 from services.redshift import create_and_insert_table
@@ -33,6 +34,33 @@ def data_generator(file: UploadFile):
         return data_loc
     except Exception as e:
             raise HTTPException(status_code=400, detail=str(e))
+
+# @router.post('/goml/LLM marketplace/data summary and query/upload_file', status_code=201)
+# def data_generator(files: List[UploadFile]):
+#     try:
+#         UPLOAD_DIR = "/api/uploads"
+
+#         if not os.path.exists(UPLOAD_DIR):
+#             os.makedirs(UPLOAD_DIR)
+
+#         data_locations = []
+
+#         for file in files:
+#             # Generate a unique file name to avoid overwriting existing files
+#             file_path = os.path.join(UPLOAD_DIR, file.filename)
+            
+#             with open(file_path, "wb") as f:
+#                 f.write(file.file.read())
+            
+#             data_loc = create_and_insert_table(file_path)
+#             data_locations.append(data_loc)
+
+#             # Remove the file after processing
+#             os.remove(file_path)
+        
+#         return data_locations
+#     except Exception as e:
+#         raise HTTPException(status_code=400, detail=str(e))
    
 @router.post('/goml/LLM marketplace/data summary and query/summary_generator', status_code=201)
 async def accuracy_generator(table_name: str):
@@ -61,3 +89,13 @@ def validating_test(query: str, table_name: str):
     except Exception as e:
             raise HTTPException(status_code=400, detail=str(e))
 
+@router.post('/goml/LLM marketplace/data summary and query/view/', status_code=201)
+def validating_test(table_name: str):
+    try:
+        
+        dataframe = export_redshift_table_to_dataframe(table_name)
+        df_string = dataframe.to_csv()
+        # print(type(df_string),df_string)
+        return df_string
+    except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e))
