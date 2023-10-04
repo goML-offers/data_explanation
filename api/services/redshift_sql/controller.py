@@ -28,7 +28,7 @@ class Controller:
         self.redshift_sql = AWSRedshift( host, database, user, password)
         self.redshift_sql.connect()
         self.chatModel = ChatGPT(openai_api_key)
-
+        self.query=""
     def run(self, message, sender, counter=0):
         if (counter > 4):
             print(1)
@@ -43,13 +43,15 @@ class Controller:
         match response["recipient"]:
             case "USER": 
                 print(4)
-                return response["message"]
+                print("1",response["message"])
+                return {"message":response["message"],"query" :self.query}
             case "SERVER":
                 print(5)
                 match response["action"]:
                     case "QUERY":
                         print(6)
                         result = self.redshift_sql.execute_query(response["message"])
+                        self.query=response["message"]
                         return self.run(result, None, counter + 1)
                     case "SCHEMA":
                         print(7)
