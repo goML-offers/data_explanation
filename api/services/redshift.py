@@ -59,7 +59,7 @@ def create_and_insert_table(csv_file_path):
     # Create a Redshift engine using SQLAlchemy
     engine = create_engine(conn_string)
     cur = conn.cursor()
-
+    table_name= table_name.lower()
     # Check if the table already exists
     table_exists_query = f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'public' AND table_name = '{table_name}');"
     cur.execute(table_exists_query)

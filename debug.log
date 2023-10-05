@@ -539,3 +539,108 @@ Nidhi,Mittal
 2023-10-04 19:23:24,032 - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
 2023-10-04 19:23:24,033 - DEBUG - message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=804 request_id=03aacf74668bbfee1da43a9cc07fdfb3 response_code=200
 2023-10-04 19:23:24,033 - DEBUG - {"recipient": "USER", "message": "The name of the customer with ID 10001 is Nidhi Mittal."}
+2023-10-04 22:41:51,818 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:35:41,088 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:36:04,577 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:36:04,577 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_field with data[2204:2223]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_value with data[2225:2272]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_field with data[2274:2286]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_value with data[2288:2296]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_part_data with data[2300:4271]
+2023-10-05 09:36:04,578 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:36:04,578 - DEBUG - Calling on_end with no data
+2023-10-05 09:37:10,427 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:37:10,427 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:37:10,427 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:37:10,427 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:37:10,427 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:37:10,428 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:37:10,428 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:37:10,428 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:37:10,428 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:37:10,428 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:37:10,428 - DEBUG - Calling on_end with no data
+2023-10-05 09:37:56,889 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_value with data[63:110]
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_field with data[112:124]
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_value with data[126:134]
+2023-10-05 09:37:56,889 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:37:56,889 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:37:56,891 - DEBUG - Calling on_part_data with data[138:2109]
+2023-10-05 09:37:56,891 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:37:56,891 - DEBUG - Calling on_end with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:38:16,277 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:38:16,277 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:38:16,277 - DEBUG - Calling on_end with no data
+2023-10-05 09:42:12,757 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:42:15,018 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:42:15,018 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:42:15,018 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:42:15,018 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:42:15,018 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:42:15,018 - DEBUG - Calling on_end with no data
+2023-10-05 09:42:31,823 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:42:36,235 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:42:49,743 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:42:53,190 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:43:28,840 - DEBUG - Using selector: SelectSelector
+2023-10-05 09:43:31,082 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:43:31,083 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:31,083 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:43:31,083 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:43:31,083 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:43:31,083 - DEBUG - Calling on_end with no data
+2023-10-05 09:43:47,840 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_value with data[63:107]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_field with data[109:121]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_value with data[123:131]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_part_data with data[135:2160]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_field with data[2204:2223]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_value with data[2225:2273]
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:47,841 - DEBUG - Calling on_header_field with data[2275:2287]
+2023-10-05 09:43:47,842 - DEBUG - Calling on_header_value with data[2289:2297]
+2023-10-05 09:43:47,842 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:43:47,842 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:43:47,842 - DEBUG - Calling on_part_data with data[2301:4781]
+2023-10-05 09:43:47,842 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:43:47,842 - DEBUG - Calling on_end with no data
