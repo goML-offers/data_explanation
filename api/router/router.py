@@ -1,5 +1,6 @@
 import sys
 from typing import List
+from pydantic import BaseModel
 from fastapi import FastAPI, File,  UploadFile
 from fastapi import APIRouter, HTTPException, Response
 from services.redshift import create_and_insert_table
@@ -14,6 +15,34 @@ load_dotenv()
 
 
 router = APIRouter()
+
+class RedshiftCredentials(BaseModel):
+    dbname: str
+    user: str
+    password: str
+    host: str
+    port: int
+
+@router.post("/goml/LLM marketplace/data summary and query/redshift_credentials/")
+async def update_redshift_credentials(credentials: RedshiftCredentials):
+    env_path = "api/.env"
+    with open(env_path, "r") as env_file:
+        lines = env_file.readlines()
+
+    # Update the values or add them if they don't exist
+    updated_lines = []
+    for line in lines:
+        key = line.split("=")[0].strip()
+        if key in ["dbname", "user", "password", "host", "port"]:
+            updated_lines.append(f"{key}={getattr(credentials, key)}\n")
+        else:
+            updated_lines.append(line)
+
+    # Write the updated values back to the .env file
+    with open(env_path, "w") as env_file:
+        env_file.writelines(updated_lines)
+
+    return {"message": "Redshift credentials updated successfully!"}
 
 @router.post('/goml/LLM marketplace/data summary and query/upload_file', status_code=201)
 def data_generator(files: List[UploadFile]):
@@ -92,13 +121,13 @@ def validating_test():
             raise HTTPException(status_code=400, detail=str(e))
     
 @router.post('/goml/LLM marketplace/data summary and query/table_schema/', status_code=201)
-def validating_test(table_names:list):
+def validating_test(table_names:str):
     try:
-        dataframe=[]
-        for table_name in table_names:
-            schema = get_table_schema(table_name)
-            dataframe.append({table_name:schema})
+        # dataframe=[]
+        # for table_name in table_names:
+        schema = get_table_schema(table_names)
+        # dataframe.append({table_name:schema})
         # print(type(df_string),df_string)
-        return dataframe
+        return schema
     except Exception as e:
             raise HTTPException(status_code=400, detail=str(e))

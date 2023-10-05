@@ -644,3 +644,59 @@ Nidhi,Mittal
 2023-10-05 09:43:47,842 - DEBUG - Calling on_part_data with data[2301:4781]
 2023-10-05 09:43:47,842 - DEBUG - Calling on_part_end with no data
 2023-10-05 09:43:47,842 - DEBUG - Calling on_end with no data
+2023-10-05 09:56:02,080 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:56:02,083 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:56:02,083 - DEBUG - Calling on_header_value with data[63:110]
+2023-10-05 09:56:02,083 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:56:02,084 - DEBUG - Calling on_header_field with data[112:124]
+2023-10-05 09:56:02,084 - DEBUG - Calling on_header_value with data[126:134]
+2023-10-05 09:56:02,084 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:56:02,084 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:56:02,086 - DEBUG - Calling on_part_data with data[138:2109]
+2023-10-05 09:56:02,086 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:56:02,086 - DEBUG - Calling on_end with no data
+2023-10-05 09:57:05,207 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_field with data[42:61]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_value with data[63:110]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_field with data[112:124]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_value with data[126:134]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_part_data with data[138:2109]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_part_begin with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_field with data[2153:2172]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_value with data[2174:2218]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_field with data[2220:2232]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_value with data[2234:2242]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_header_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_headers_finished with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_part_data with data[2246:4271]
+2023-10-05 09:57:05,208 - DEBUG - Calling on_part_end with no data
+2023-10-05 09:57:05,208 - DEBUG - Calling on_end with no data
+2023-10-05 10:21:01,723 - DEBUG - message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+2023-10-05 10:21:01,725 - DEBUG - api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "You are an AI assistant, Assume the role of a business analyst who has a good knowledge of data science and data analysis.\\n            You\'ll receive a CSV or Excel file. Examine its column headers and the content of the first five rows, \\n            presented as a data frame\'s head. Your task is to understand the dataset\'s business context and provide\\n            a brief description, without delving into technical details like data types. Instead, focus on its \\n            business implications. For instance, if columns include \'Name\', \'Birthday\', \'Sex\', and \'Hospital\', \\n            your interpretation might be: \\"The dataset contains birth records of children from hospitals in a \\n            specific region.\\" Your description should be text-based and only 150 words.\\n            Try and categorize them under a specific function in an industry. Below are the outputs that you \\n            need to generate. For industry, pick one of the industried recognized by Global Industry Classification Standard (GICS)\\n            For function, choose one of the following functions that\'s most appropriate - Sales, Marketing, Operations, Delivery,\\n            HR, Finance, Accounting, Legal, Compliance, Supply Chain, Project Delivery, Business Development\\n            Industry:\\n            Function:\\n            Category:\\n            Description:"}, {"role": "user", "content": "  address_id  apartment_number        street apartment_name  customer_id unnamed: 5  unnamed: 6\\n0      CA100                14        Tetlow        Emerald        10001       None         1.0\\n1      CA101                13   Palace Road        Emerald        10002       None         NaN\\n2      CA102                18   New England        Emerald        10003       None         3.0\\n3      CA103                12     Brookline        Emerald        10004       None         NaN\\n4      CA104                12  Heath Street        Emerald        10005       None         NaN"}]}' message='Post details'
+2023-10-05 10:21:01,738 - DEBUG - Converted retries value: 2 -> Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2023-10-05 10:21:01,759 - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2023-10-05 10:21:05,484 - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/1.1" 200 None
+2023-10-05 10:21:05,493 - DEBUG - message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3195 request_id=d4bf97598490a6d14cb57c7c8db02eb6 response_code=200
+2023-10-05 12:36:36,799 - DEBUG - Using selector: SelectSelector
+2023-10-05 12:36:43,264 - DEBUG - Using selector: SelectSelector
+2023-10-05 12:36:51,239 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:25:34,495 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:25:57,325 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:26:04,443 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:27:22,117 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:28:02,228 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:28:04,829 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:29:18,812 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:29:41,332 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:29:44,281 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:31:16,918 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:31:22,486 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:31:39,386 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:32:16,234 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:32:32,515 - DEBUG - Using selector: SelectSelector
+2023-10-05 14:32:36,120 - DEBUG - Using selector: SelectSelector
