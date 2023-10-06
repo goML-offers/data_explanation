@@ -25,24 +25,27 @@ class RedshiftCredentials(BaseModel):
 
 @router.post("/goml/LLM marketplace/data summary and query/redshift_credentials/")
 async def update_redshift_credentials(credentials: RedshiftCredentials):
-    env_path = "api/.env"
-    with open(env_path, "r") as env_file:
-        lines = env_file.readlines()
+    try:
+        print(credentials.__dict__)
+        env_path = "api/.env"
+        with open(env_path, "r") as env_file:
+            lines = env_file.readlines()
 
-    # Update the values or add them if they don't exist
-    updated_lines = []
-    for line in lines:
-        key = line.split("=")[0].strip()
-        if key in ["dbname", "user", "password", "host", "port"]:
-            updated_lines.append(f"{key}={getattr(credentials, key)}\n")
-        else:
-            updated_lines.append(line)
+        # Update the values or add them if they don't exist
+        updated_lines = []
+        for line in lines:
+            key = line.split("=")[0].strip()
+            if key in ["dbname", "user", "password", "host", "port"]:
+                updated_lines.append(f"{key}={getattr(credentials, key)}\n")
+            else:
+                updated_lines.append(line)
 
-    # Write the updated values back to the .env file
-    with open(env_path, "w") as env_file:
-        env_file.writelines(updated_lines)
-
-    return {"message": "Redshift credentials updated successfully!"}
+        # Write the updated values back to the .env file
+        with open(env_path, "w") as env_file:
+            env_file.writelines(updated_lines)
+            return True
+    except Exception as e:
+        return False
 
 @router.post('/goml/LLM marketplace/data summary and query/upload_file', status_code=201)
 def data_generator(files: List[UploadFile]):
