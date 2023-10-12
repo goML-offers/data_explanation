@@ -7,6 +7,7 @@ from services.redshift import create_and_insert_table
 from services.redshift_sql.terminal import chat_bot
 from services.csv_to_redshift import export_redshift_table_to_dataframe,get_all_table_names,get_table_schema
 from services.summary_gen import summary_generation
+from services.test_conn import check_redshift_connection
 import os
 from fastapi.responses import JSONResponse
 import json
@@ -43,8 +44,11 @@ async def update_redshift_credentials(credentials: RedshiftCredentials):
         # Write the updated values back to the .env file
         with open(env_path, "w") as env_file:
             env_file.writelines(updated_lines)
-            return True
+            is_conn = check_redshift_connection()
+            print(is_conn)
+            return is_conn
     except Exception as e:
+        print(e)
         return False
 
 @router.post('/goml/LLM marketplace/data summary and query/upload_file', status_code=201)
